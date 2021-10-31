@@ -21,7 +21,6 @@ const getData = async (url, setQuote) => {
       author: data[0].author,
     };
     setQuote(newQuote);
-    console.log(newQuote);
   } catch (err) {
     console.error(err);
   }

@@ -1,13 +1,34 @@
 import React, { useState, useEffect } from 'react';
 import Quote from './components/Quote';
 import { useFetch } from './hooks/useFetch';
+
 const initialQuote = {
   text: '',
   author: '',
 };
+let url = 'https://breakingbadapi.com/api/quote/random';
+
+const getData = async (url, setQuote) => {
+  try {
+    let response = await fetch(url);
+
+    if (!response.ok) throw new Error(response.statusText || '404');
+
+    let data = await response.json();
+    const newQuote = {
+      ...initialQuote,
+      text: data[0].quote,
+      author: data[0].author,
+    };
+    setQuote(newQuote);
+    console.log(newQuote);
+  } catch (err) {
+    console.error(err);
+  }
+};
 
 function App() {
-  let { data } = useFetch('https://breakingbadapi.com/api/quote/random');
+  let { data } = useFetch(url);
   const [quote, setQuote] = useState(initialQuote);
 
   useEffect(() => {
@@ -28,16 +49,8 @@ function App() {
         alt='logo'
       />
       <button
-        onclick={() => {
-          let { data } = useFetch(
-            'https://breakingbadapi.com/api/quote/random'
-          );
-          const newQuote = {
-            ...initialQuote,
-            text: data[0].quote,
-            author: data[0].author,
-          };
-          setQuote(newQuote);
+        onClick={(e) => {
+          getData(url, setQuote);
         }}
       >
         Get Another

@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/BreakingApp/static/css/main.8b3f9302.chunk.css",
-    "main.js": "/BreakingApp/static/js/main.cf1797b4.chunk.js",
-    "main.js.map": "/BreakingApp/static/js/main.cf1797b4.chunk.js.map",
+    "main.js": "/BreakingApp/static/js/main.58eb9173.chunk.js",
+    "main.js.map": "/BreakingApp/static/js/main.58eb9173.chunk.js.map",
     "runtime-main.js": "/BreakingApp/static/js/runtime-main.17f06671.js",
     "runtime-main.js.map": "/BreakingApp/static/js/runtime-main.17f06671.js.map",
     "static/js/2.53ffa1c2.chunk.js": "/BreakingApp/static/js/2.53ffa1c2.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.17f06671.js",
     "static/js/2.53ffa1c2.chunk.js",
     "static/css/main.8b3f9302.chunk.css",
-    "static/js/main.cf1797b4.chunk.js"
+    "static/js/main.58eb9173.chunk.js"
   ]
 }
